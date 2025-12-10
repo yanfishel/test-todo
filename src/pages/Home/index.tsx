@@ -17,17 +17,9 @@ const Home = () => {
   const selectUser = useStore(({ selectUser }) => selectUser)
 
   const documentClickHandler = (e:PointerEvent) => {
-    const items = document.querySelectorAll('.user-card')
     const target = e.target as HTMLElement
-    let contains = false;
-    items.forEach(item => {
-      if (item.contains(target)) {
-        contains = true
-      }
-    })
-    if(!contains){
-      selectUser(null)
-    }
+    if(target.closest('.user-card')) return;
+    selectUser(null)
   }
 
   useEffect(() => {

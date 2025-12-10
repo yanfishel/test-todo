@@ -22,7 +22,7 @@ const TodosUserCard = ({ userId }: IProps) => {
   const selectUser = useStore(({ selectUser }) => selectUser)
 
   const getApiUsers = async () => {
-    if(!selectedUser && userId) {
+    if((!selectedUser && userId) || (userId && selectedUser?.id+'' !== userId)) {
       setLoading(true)
       const user = await getUser(userId, errorHandler)
       selectUser( user )
@@ -35,12 +35,14 @@ const TodosUserCard = ({ userId }: IProps) => {
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
+  if(error) {
+    return <div style={{flex: 1}}> <ErrorMessage error={ error } /></div>
+  }
+
   return (
     <div className={`todos-user-card`} >
 
       { loading && <PageLoader /> }
-
-      { error && <ErrorMessage error={ error } /> }
 
       { selectedUser &&
         <>
