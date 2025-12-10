@@ -33,9 +33,9 @@ const Home = () => {
   
   return (
     <>
-      <h1 className={'title'}>Users</h1>
-
       <div className={'breadcrumbs'}>Home</div>
+
+      <h1 className={'title'}>Users</h1>
 
       { loading && <PageLoader /> }
 

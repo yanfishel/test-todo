@@ -14,12 +14,12 @@ const TodosPage = () => {
   
   return (
     <>
-      <h1 className={'title'}>Todos</h1>
-
       <div className={'breadcrumbs'}>
         <Link to={'/'}>Home</Link>
         <span>Todos</span>
       </div>
+
+      <h1 className={'title'}>Todos</h1>
 
       { loading && <PageLoader /> }
 
