@@ -1,8 +1,8 @@
+import {useEffect, useState} from "react";
+
+import type {T_User} from "../types";
 import {getUsers} from "../api/users.ts";
 import useErrorHandler from "./useErrorHandler.ts";
-import {useEffect, useState} from "react";
-import type {T_User} from "../types";
-
 
 
 const UseUsers = () => {

@@ -1,0 +1,28 @@
+
+header {
+  background-color: #213547;
+
+  & .content {
+    width: 100%;
+    max-width: 1024px;
+    margin: 0 auto;
+    padding: 10px 25px;
+
+    & .logo {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      color: #fff;
+      cursor: pointer;
+
+      & svg:first-child {
+        width: 30px;
+      }
+      & svg:last-child {
+        width: auto;
+        height: 26px;
+      }
+    }
+
+  }
+}

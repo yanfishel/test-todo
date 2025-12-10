@@ -11,13 +11,28 @@
   cursor: pointer;
 
   &:hover {
-    opacity: 0.55;
     box-shadow: 0 4px 10px -10px rgba(0,0,0,0.1);
   }
 
   &.completed {
-    background: rgba(0,0,0,0.05);
+    background: var(--selected-background);
     opacity: 0.75;
+    text-decoration: line-through;
+
+    & svg {
+      color: green;
+    }
+  }
+
+  .title {
+    flex: 1;
+  }
+
+  & svg {
+    color: #cccccc;
+    width: 1.25rem;
+    height: 1.25rem;
+    min-width: 1.25rem;
   }
 
   & input {

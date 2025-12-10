@@ -1,0 +1,48 @@
+
+.todos-user-card {
+  padding: 1rem;
+  border: 1px solid #ebebeb;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px -5px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+  gap: .15rem;
+  font-size: 0.9rem;
+  width: 320px;
+  max-width: 320px;
+  min-width: 320px;
+  height: 115px;
+  min-height: 115px;
+  position: relative;
+
+  &:hover {
+    box-shadow: 0 4px 10px -10px rgba(0,0,0,0.1);
+  }
+
+  & .name {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    & svg {
+      width: 1.5rem;
+      height: 1.5rem;
+    }
+  }
+
+  & .username, & .email {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 0.15rem;
+    & svg {
+      width: 1rem;
+      height: 1rem;
+    }
+  }
+
+  & .username {
+    font-style: italic;
+  }
+}

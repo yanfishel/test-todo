@@ -4,4 +4,79 @@
   border: 1px solid #ebebeb;
   border-radius: 8px;
   box-shadow: 0 4px 10px -5px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+  gap: .15rem;
+  font-size: 0.9rem;
+  cursor: pointer;
+  height: 150px;
+  min-height: 150px;
+
+  &:hover {
+    box-shadow: 0 4px 10px -10px rgba(0,0,0,0.1);
+  }
+
+  &.selected {
+    background: var(--selected-background);
+    border-color: rgb(from var(--action-color) r g b / 45%);
+    box-shadow: 0 4px 10px -10px rgba(0,0,0,0.1);
+    cursor: default;
+  }
+
+  & .name {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    & svg {
+      width: 1.5rem;
+      height: 1.5rem;
+    }
+  }
+
+  & .username, & .email {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 0.15rem;
+    & svg {
+      width: 1rem;
+      height: 1rem;
+    }
+  }
+
+  & .username {
+    font-style: italic;
+  }
+
+  & .actions {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 0.5rem;
+    margin-top: 0.5rem;
+  }
+
+  & button {
+    color:#ffffff;
+    text-decoration: none;
+    background: var(--action-color);
+    padding: 0.4rem 0.75rem;
+    border-radius: 4px;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.75rem;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-weight: normal;
+
+    &:hover, &:focus {
+      color:#ffffff;
+      background: var(--action-color-hover);
+    }
+  }
 }
+

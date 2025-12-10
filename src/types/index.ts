@@ -31,3 +31,10 @@ export type T_Todo = {
   title: string;
   completed: boolean;
 }
+
+export type T_Store = {
+  hideCompleted: boolean;
+  selectedUser:T_User | null;
+  selectUser: (user:T_User | null) => void;
+  toggleCompleted: (hide:boolean) => void;
+}

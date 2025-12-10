@@ -12,23 +12,21 @@ const TodosPage = () => {
 
   const { loading, todos, error } = useTodos(userId);
   
-  console.log(todos);
-  
   return (
     <>
+      <h1 className={'title'}>Todos</h1>
+
       <div className={'breadcrumbs'}>
         <Link to={'/'}>Home</Link>
         <span>Todos</span>
       </div>
 
-      <h1 className={'title'}>Todos</h1>
-
       { loading && <PageLoader /> }
 
       { error && <Error error={ error} /> }
 
-      { todos &&
-        <Todos todos={todos} />
+      { todos && userId &&
+        <Todos userId={ userId } todos={todos} />
       }
     </>
   )

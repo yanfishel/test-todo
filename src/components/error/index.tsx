@@ -4,7 +4,7 @@ import './style.css'
 type IProps = {
   error: Error | unknown
 }
-const Index = ({ error }: IProps) => {
+const ErrorMessage = ({ error }: IProps) => {
 
   const message = error instanceof Error ? error.message : 'Something went wrong!'
 
@@ -15,4 +15,4 @@ const Index = ({ error }: IProps) => {
   )
 }
 
-export default Index
+export default ErrorMessage

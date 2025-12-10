@@ -3,3 +3,28 @@
   flex-direction: column;
   gap: 0.5rem;
 }
+
+.filter-usercard-container {
+  margin-bottom: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 1rem;
+}
+
+@media (max-width: 768px) {
+  .filter-usercard-container {
+    flex-direction: column;
+
+    & .filter-container {
+      order: 2;
+      align-self: flex-start;
+    }
+
+    & .todos-user-card {
+      width: 100%;
+      max-width: 100%;
+      min-width: 100%;
+    }
+  }
+}

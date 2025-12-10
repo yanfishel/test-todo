@@ -18,7 +18,7 @@ const routes = [
         index: true,
         Component: Home,
       },
-      { path: "/todo/:userId", Component: TodosPage },
+      { path: "/todos/:userId", Component: TodosPage },
       { path: "*", Component: NotFound }
     ]
   },
