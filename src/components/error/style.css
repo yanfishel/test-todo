@@ -1,0 +1,9 @@
+
+.error-container {
+  padding: 1rem;
+  text-align: center;
+  background: #f00;
+  color: #fff;
+  border-radius: 8px;
+  grid-column: 1 / -1;
+}
