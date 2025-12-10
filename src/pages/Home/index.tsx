@@ -3,7 +3,7 @@ import {useEffect} from "react";
 import {useStore} from "../../store";
 import useUsers from "../../hooks/useUsers.ts";
 import PageLoader from "../../components/loader";
-import ErrorMessage from "../../components/error";
+import ErrorMessage from "../../components/error-message";
 import UserCard from "../../components/user-card";
 import './style.css'
 

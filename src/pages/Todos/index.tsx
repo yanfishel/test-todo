@@ -2,7 +2,7 @@ import {Link, useParams} from "react-router-dom";
 
 import useTodos from "../../hooks/useTodos.ts";
 import PageLoader from "../../components/loader";
-import Error from "../../components/error";
+import Error from "../../components/error-message";
 import Todos from "../../components/todos";
 
 

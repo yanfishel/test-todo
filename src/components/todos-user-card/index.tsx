@@ -5,7 +5,7 @@ import {getUser} from "../../api/users.ts";
 import useErrorHandler from "../../hooks/useErrorHandler.ts";
 import {AtIcon, EmailIcon, UserIcon} from "../../assets/icons.tsx";
 import PageLoader from "../loader";
-import ErrorMessage from "../error";
+import ErrorMessage from "../error-message";
 import './style.css'
 
 
